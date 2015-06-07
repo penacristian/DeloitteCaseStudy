@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="JBh-cj-rjO">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Catalog-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="CategoriesViewController" customModule="DeloitteProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7Pi-8J-hJN" userLabel="Categories Collection View">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gI5-Kl-xC3">
+                                    <size key="itemSize" width="226" height="257"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryCollectionViewCell" id="HTJ-eI-RiS" customClass="CategoryCollectionViewCell" customModule="DeloitteProject" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="226" height="257"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DSI-N6-x4y">
+                                                    <rect key="frame" x="8" y="8" width="210" height="241"/>
+                                                </imageView>
+                                                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mfH-GT-kVS">
+                                                    <rect key="frame" x="0.0" y="197" width="226" height="60"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="BGE-2B-LhG">
+                                                        <rect key="frame" x="0.0" y="0.0" width="226" height="60"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    </view>
+                                                    <color key="backgroundColor" red="0.20392157137393951" green="0.28627452254295349" blue="0.36862745881080627" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="lfa-ar-tR6"/>
+                                                    </constraints>
+                                                    <blurEffect style="light"/>
+                                                </visualEffectView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Men's Casualwear" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QlW-N8-2Xz">
+                                                    <rect key="frame" x="8" y="218" width="210" height="20.5"/>
+                                                    <fontDescription key="fontDescription" name="OriyaSangamMN" family="Oriya Sangam MN" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="mfH-GT-kVS" firstAttribute="leading" secondItem="HTJ-eI-RiS" secondAttribute="leadingMargin" constant="-8" id="3dw-Bq-wQN"/>
+                                            <constraint firstItem="mfH-GT-kVS" firstAttribute="centerY" secondItem="QlW-N8-2Xz" secondAttribute="centerY" constant="-1" id="41S-rD-KsN"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="mfH-GT-kVS" secondAttribute="trailing" constant="-8" id="BgN-4g-uUT"/>
+                                            <constraint firstItem="QlW-N8-2Xz" firstAttribute="leading" secondItem="HTJ-eI-RiS" secondAttribute="leadingMargin" id="DXb-Vs-aqc"/>
+                                            <constraint firstAttribute="centerX" secondItem="QlW-N8-2Xz" secondAttribute="centerX" id="Gvn-Mb-rMS"/>
+                                            <constraint firstItem="DSI-N6-x4y" firstAttribute="leading" secondItem="HTJ-eI-RiS" secondAttribute="leadingMargin" id="IaQ-3D-BH9"/>
+                                            <constraint firstItem="QlW-N8-2Xz" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="HTJ-eI-RiS" secondAttribute="trailingMargin" id="M6Y-CG-rGa"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="DSI-N6-x4y" secondAttribute="bottom" id="PPj-om-oqI"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="mfH-GT-kVS" secondAttribute="bottom" constant="-8" id="UE6-f8-LEm"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="DSI-N6-x4y" secondAttribute="trailing" id="Uqr-Mf-dYL"/>
+                                            <constraint firstItem="DSI-N6-x4y" firstAttribute="top" secondItem="HTJ-eI-RiS" secondAttribute="topMargin" id="gah-om-egZ"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="categoryImage" destination="DSI-N6-x4y" id="Aaw-me-H0q"/>
+                                            <outlet property="categoryNameLabel" destination="QlW-N8-2Xz" id="AIo-0U-bZe"/>
+                                            <outlet property="visualEffectView" destination="mfH-GT-kVS" id="ztd-Yo-rwn"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="XDu-Ai-2MD"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="Zs9-ef-g0y"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.37254901959999998" green="0.40000000000000002" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="7Pi-8J-hJN" secondAttribute="bottom" id="58a-vw-c7w"/>
+                            <constraint firstItem="7Pi-8J-hJN" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="UHE-O9-Ccu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7Pi-8J-hJN" secondAttribute="trailing" constant="-16" id="ahq-3W-Co1"/>
+                            <constraint firstItem="7Pi-8J-hJN" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="ngW-QP-pJc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Catalog" id="uiN-nE-PC6"/>
+                    <connections>
+                        <outlet property="categoriesCollectionView" destination="7Pi-8J-hJN" id="K0o-DY-y2t"/>
+                        <segue destination="uG2-WK-gBn" kind="show" identifier="ProductsViewControllerSegue" id="x2d-xm-Lle"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1340" y="-344"/>
+        </scene>
+        <!--Category View Controller-->
+        <scene sceneID="595-rt-vj4">
+            <objects>
+                <viewController id="uG2-WK-gBn" customClass="CategoryViewController" customModule="DeloitteProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NG6-B4-Enm"/>
+                        <viewControllerLayoutGuide type="bottom" id="Efc-ty-ulC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tPY-Cs-Qtt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="109" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="cDn-EI-EoY" userLabel="Products Table View">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="uG2-WK-gBn" id="3An-bP-bHZ"/>
+                                    <outlet property="delegate" destination="uG2-WK-gBn" id="Q8W-VU-oNV"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.37254901959999998" green="0.40000000000000002" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cDn-EI-EoY" firstAttribute="top" secondItem="tPY-Cs-Qtt" secondAttribute="topMargin" id="4ZN-Pv-LOc"/>
+                            <constraint firstItem="cDn-EI-EoY" firstAttribute="leading" secondItem="tPY-Cs-Qtt" secondAttribute="leadingMargin" constant="-16" id="AsA-gK-vQ8"/>
+                            <constraint firstItem="cDn-EI-EoY" firstAttribute="bottom" secondItem="tPY-Cs-Qtt" secondAttribute="bottomMargin" id="dcG-QJ-Ap2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cDn-EI-EoY" secondAttribute="trailing" constant="-16" id="kU9-cp-KG1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="productsTableView" destination="cDn-EI-EoY" id="Ptf-9T-20n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zLt-2Y-aEm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2013" y="-344"/>
+        </scene>
+        <!--Catalog-->
+        <scene sceneID="QM6-ik-CKc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="07v-RI-ifI" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Catalog" image="Catalog-Icon" id="d4S-0j-LBx"/>
+                    <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="cJR-LW-ScP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="Lcv-jV-pAr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r4v-bE-2vq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="651" y="-344"/>
+        </scene>
+        <!--Shopping Cart-->
+        <scene sceneID="OmZ-wX-z9c">
+            <objects>
+                <viewController id="7eX-uN-m8q" customClass="CartViewController" customModule="DeloitteProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RzP-8o-QcS"/>
+                        <viewControllerLayoutGuide type="bottom" id="qIB-Z7-j4o"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DhJ-2x-dH7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="85" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="kJP-sU-wSr">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CartTableViewFooter" rowHeight="85" id="H8p-tc-YQf" customClass="CartTableViewFooter" customModule="DeloitteProject" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="H8p-tc-YQf" id="Sdh-vl-ROB">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rFc-hn-gaR">
+                                                    <rect key="frame" x="1" y="8" width="598" height="69"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PriceLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bP5-a7-zrz">
+                                                            <rect key="frame" x="491" y="23" width="87" height="23"/>
+                                                            <fontDescription key="fontDescription" name="OriyaSangamMN-Bold" family="Oriya Sangam MN" pointSize="19"/>
+                                                            <color key="textColor" red="0.086274509799999996" green="0.62745098040000002" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3SF-Qi-AEO">
+                                                            <rect key="frame" x="444" y="25" width="34.5" height="19"/>
+                                                            <fontDescription key="fontDescription" name="OriyaSangamMN" family="Oriya Sangam MN" pointSize="16"/>
+                                                            <color key="textColor" red="0.086274509799999996" green="0.62745098040000002" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstItem="bP5-a7-zrz" firstAttribute="centerY" secondItem="3SF-Qi-AEO" secondAttribute="centerY" id="6oX-8k-fSg"/>
+                                                        <constraint firstAttribute="centerY" secondItem="bP5-a7-zrz" secondAttribute="centerY" id="SFN-z8-MZX"/>
+                                                        <constraint firstItem="bP5-a7-zrz" firstAttribute="leading" secondItem="3SF-Qi-AEO" secondAttribute="trailing" constant="12.5" id="idG-nG-XEU"/>
+                                                        <constraint firstAttribute="trailing" secondItem="bP5-a7-zrz" secondAttribute="trailing" constant="20" id="uMq-xJ-SiC"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="rFc-hn-gaR" firstAttribute="bottom" secondItem="Sdh-vl-ROB" secondAttribute="bottomMargin" id="0eB-Bg-JcM"/>
+                                                <constraint firstItem="rFc-hn-gaR" firstAttribute="top" secondItem="Sdh-vl-ROB" secondAttribute="topMargin" id="2sn-aq-4J2"/>
+                                                <constraint firstItem="rFc-hn-gaR" firstAttribute="trailing" secondItem="Sdh-vl-ROB" secondAttribute="trailingMargin" constant="7" id="h1n-NE-Uzs"/>
+                                                <constraint firstItem="rFc-hn-gaR" firstAttribute="leading" secondItem="Sdh-vl-ROB" secondAttribute="leadingMargin" constant="-7" id="nLk-GA-JvI"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="totalPriceLabel" destination="bP5-a7-zrz" id="eXR-eU-jtS"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="7eX-uN-m8q" id="jGm-oD-ZG2"/>
+                                    <outlet property="delegate" destination="7eX-uN-m8q" id="B3I-xx-PQI"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qIB-Z7-j4o" firstAttribute="top" secondItem="kJP-sU-wSr" secondAttribute="bottom" id="8qm-qQ-dNz"/>
+                            <constraint firstItem="kJP-sU-wSr" firstAttribute="top" secondItem="RzP-8o-QcS" secondAttribute="bottom" id="BTY-nm-JAI"/>
+                            <constraint firstItem="kJP-sU-wSr" firstAttribute="leading" secondItem="DhJ-2x-dH7" secondAttribute="leadingMargin" constant="-16" id="Srs-of-ekk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kJP-sU-wSr" secondAttribute="trailing" constant="-16" id="g8i-cq-lUy"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Shopping Cart" id="ttk-Te-VwL"/>
+                    <connections>
+                        <outlet property="productsTableView" destination="kJP-sU-wSr" id="wHr-ec-tF7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Ib-mY-yVA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1463" y="342"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="uPS-DR-ZBh">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="JBh-cj-rjO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="LSY-pC-h98">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="07v-RI-ifI" kind="relationship" relationship="viewControllers" id="gS2-WJ-x4M"/>
+                        <segue destination="7dr-EL-eEO" kind="relationship" relationship="viewControllers" id="iVK-gp-u2y"/>
+                        <segue destination="Ugp-gC-btD" kind="relationship" relationship="viewControllers" id="xga-fW-a4d"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EbM-ht-f9s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-35" y="-344"/>
+        </scene>
+        <!--Cart-->
+        <scene sceneID="nCl-UL-chj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7dr-EL-eEO" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Cart" image="Cart-Icon" id="d43-RA-PhR"/>
+                    <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="i1F-zQ-j5d">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="7eX-uN-m8q" kind="relationship" relationship="rootViewController" id="mg5-6a-qw4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="23a-A0-kIH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="651" y="342"/>
+        </scene>
+        <!--Wishlist-->
+        <scene sceneID="Wr8-Hw-Kby">
+            <objects>
+                <viewController id="ctP-jG-Phk" customClass="WishlistViewController" customModule="DeloitteProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GyK-Au-sma"/>
+                        <viewControllerLayoutGuide type="bottom" id="iFV-Oc-RjK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TNj-uV-epi">
+                        <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="eTr-7U-te6" userLabel="Wishlist Table View">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="ctP-jG-Phk" id="OOQ-RB-KnE"/>
+                                    <outlet property="delegate" destination="ctP-jG-Phk" id="bfy-HR-onu"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.37254901959999998" green="0.40000000000000002" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eTr-7U-te6" firstAttribute="top" secondItem="TNj-uV-epi" secondAttribute="topMargin" id="BuZ-A1-wG5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eTr-7U-te6" secondAttribute="trailing" constant="-16" id="K6I-0L-0HC"/>
+                            <constraint firstItem="eTr-7U-te6" firstAttribute="leading" secondItem="TNj-uV-epi" secondAttribute="leadingMargin" constant="-16" id="m95-E5-akf"/>
+                            <constraint firstItem="eTr-7U-te6" firstAttribute="bottom" secondItem="TNj-uV-epi" secondAttribute="bottomMargin" id="rhz-Sb-kQx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Wishlist" id="ysC-gz-hti"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <connections>
+                        <outlet property="productsTableView" destination="eTr-7U-te6" id="0Px-qA-O8m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bcw-3J-fvq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1463" y="1030"/>
+        </scene>
+        <!--Wishlist-->
+        <scene sceneID="qFC-WQ-M0Q">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ugp-gC-btD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Wishlist" image="AddToWishlist" id="amb-6p-C7J"/>
+                    <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="H8J-MT-lLB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ctP-jG-Phk" kind="relationship" relationship="rootViewController" id="hPc-4E-8vE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M6O-gF-2KU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="651" y="1030"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="AddToWishlist" width="25" height="25"/>
+        <image name="Cart-Icon" width="30" height="30"/>
+        <image name="Catalog-Icon" width="30" height="30"/>
+    </resources>
+    <color key="tintColor" red="0.086274509799999996" green="0.62745098040000002" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+</document>
